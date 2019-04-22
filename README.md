@@ -1,6 +1,5 @@
-# To install the projet
-
-### use the following commands 
+## To install the projet
+### Use the following commands 
 1. lone the repository
 2. `cd $folderPath`
 3. `yarn install`
