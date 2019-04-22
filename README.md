@@ -1,3 +1,14 @@
+# To install the projet
+
+### use the following commands 
+1. lone the repository
+2. `cd $folderPath`
+3. `yarn install`
+4. `yarn start`
+5. Open your brower on the local port you selected (default localhost:3000)
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
