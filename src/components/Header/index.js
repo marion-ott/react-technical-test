@@ -58,6 +58,7 @@ class Header extends React.Component {
     isMobile = () => {
         let isMobile = screenIsMobile()
         if(isMobile !== this.state.isMobile) {
+            TweenLite.to(this.logo,0.3,{ease: Power2.easeOut, width:this.state.isMobile ? "150px" : "35px"})
             this.setState({
                 isMobile
             }, () => isMobile ? this.setTimeline() : false)

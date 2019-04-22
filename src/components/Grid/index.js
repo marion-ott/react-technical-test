@@ -7,6 +7,9 @@ import { cascadeAppear } from '../../global/helpers'
 class Grid extends React.Component {
     constructor(props) {
         super(props)
+        this.state = {
+            animated: false
+        }
         this.articles = []
         this.startAnimation = this.startAnimation.bind(this)
         this.getWindowHeight = this.getWindowHeight.bind(this)
@@ -25,8 +28,11 @@ class Grid extends React.Component {
     }
 
     startAnimation = () => {
-        if(this.container.getBoundingClientRect().top + 20 < this.windowHeight) {
+        if(this.container.getBoundingClientRect().top + 20 < this.windowHeight && !this.state.animated) {
             cascadeAppear(this.articles)
+            this.setState({
+                animated: true
+            })
         }
     }
 
