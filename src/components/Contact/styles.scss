@@ -1,0 +1,47 @@
+@import "src/config/styles.scss";
+
+.Contact {
+    width: 100%;
+    background-color: $red;
+    padding: 60px 20px;
+    color: $white;
+    text-align: center;
+    opacity: 0;
+    @include mobile {
+        padding: 40px 20px;
+    }
+    &__title {
+        @include poppins();
+        text-transform: uppercase;
+        font-weight: $bold;
+        font-size: 40px;
+        letter-spacing: -0.05em;
+        @include mobile {
+            font-size: 30px;
+        }
+    }
+    &__link {
+        margin-top: 30px;
+        display: inline-block;
+        color: $white;
+        text-decoration: none;
+        background-color: $btnGrey;
+        border: solid 1px $white;
+        border-radius: 5px;
+        font-size: 18px;
+        font-weight: $bold;
+        letter-spacing: $letterSpacing;
+        text-transform: uppercase;
+        padding: 15px 30px;
+        @include poppins();
+        transition: ease .2s all;
+        &:hover {
+            background-color: $white;
+            color: $black;
+        }
+        @include mobile {
+            font-size: 14px;
+            margin-top: 20px;
+        }
+    }
+}

@@ -1,0 +1,93 @@
+@import "src/config/styles.scss";
+
+.Info {
+    width: 100%;
+    height: 615px;
+    color: $white;
+    display: flex;
+    &__side {
+        max-width: 430px;
+        width: 35%;
+        background-color: #e9e9e9;
+        position: relative;
+        z-index: -5;
+        &__img {
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            left: 50px;
+            transform: translate(0, -50%);
+            opacity: 0.19;
+            z-index: -2;
+        }
+        @include mobile {
+            display: none;
+        }
+    }
+    &__content {
+        width: 65%;
+        height: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        @include mobile {
+            width: 100%;
+        }
+        &__video {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            &--overlay {
+                position: absolute;
+                z-index: 1;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.75);
+            }
+            &__container {
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                position: relative;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+            }
+        }
+        &__text {
+            max-width: 590px;
+            width: 100%;
+            padding-left: 80px;
+            padding-right: 20px;
+            position: relative;
+            z-index: 1;
+            @include mobile {
+                padding: 0 20px;
+            }
+            &__title {
+                color: $white;
+                margin-bottom: 35px;
+                line-height: 50px;
+            }
+            &__paragraph {
+                color: $white;
+                font-size: 16px;
+                margin-bottom: 20px;
+            }
+            &__list {
+                &__item {
+                    display: flex;
+                    align-items: center;
+                    &:not(:last-child) {
+                        margin-bottom: 10px;
+                    }
+                    img {
+                        margin-right: 15px;
+                    }
+                }
+            }
+        }
+    }
+}

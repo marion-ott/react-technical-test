@@ -1,0 +1,22 @@
+@import "src/config/styles.scss";
+
+.Content {
+    width: 100%;
+    padding: $blocPadding;
+    &__paragraph {
+        padding: $contentPadding;
+        margin-bottom: 40px;
+        h3 {
+            margin-bottom: 20px;
+        }
+    }
+    button.Button {
+        display: block;
+        margin: 0px 20px 0px auto;
+        cursor: pointer;
+        -webkit-appearance: none;
+        &:focus {
+            outline: none;
+        }
+    }
+}

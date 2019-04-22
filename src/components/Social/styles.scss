@@ -1,0 +1,36 @@
+@import "src/config/styles.scss";
+
+.Social {
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 430px;
+        width: 100%;
+        padding: 50px 20px;
+    }
+    &__copyright {
+        font-size: 14px;
+        font-weight: $medium;
+        color: $grey;
+        @include poppins();
+    }
+    &__icons {
+        max-width: 140px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        @include mobile {
+            max-width: 150px;
+        }
+        a {
+            width: 40px;
+            @include mobile {
+                width: 30px;
+            }
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

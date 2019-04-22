@@ -1,0 +1,173 @@
+@import './config/styles.scss';
+
+/**  RESET CSS  **/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/** 	FONT FACE 	**/
+/** Bitter */
+@font-face {
+	font-family: "Bitter";
+	font-style: normal;
+	font-weight: normal;
+	src: url('/assets/fonts/Bitter/Bitter-Regular.ttf') format("truetype");
+}
+
+@font-face {
+	font-family: "Bitter";
+	font-style: normal;
+	font-weight: bold;
+	src: url('/assets/fonts/Bitter/Bitter-Bold.ttf') format("truetype");
+}
+
+@font-face {
+	font-family: "Bitter";
+	font-style: italic;
+	font-weight: normal;
+	src: url('/assets/fonts/Bitter/Bitter-Italic.ttf') format("truetype");
+}
+
+/** Poppins */
+@font-face {
+	font-family: "Poppins";
+	font-style: normal;
+	font-weight: 100;
+	src: url('/assets/fonts/Poppins/Poppins-Light.ttf') format("truetype");
+}
+
+@font-face {
+	font-family: "Poppins";
+	font-style: normal;
+	font-weight: normal;
+	src: url('/assets/fonts/Poppins/Poppins-Regular.ttf') format("truetype");
+}
+
+@font-face {
+	font-family: "Poppins";
+	font-style: normal;
+	font-weight: 400;
+	src: url('/assets/fonts/Poppins/Poppins-Medium.ttf') format("truetype");
+}
+
+@font-face {
+	font-family: "Poppins";
+	font-style: normal;
+	font-weight: 500;
+	src: url('/assets/fonts/Poppins/Poppins-SemiBold.ttf') format("truetype");
+}
+
+@font-face {
+	font-family: "Poppins";
+	font-style: normal;
+	font-weight: bold;
+	src: url('/assets/fonts/Poppins/Poppins-Bold.ttf') format("truetype");
+}
+
+
+* {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	@include bitter();
+}
+
+video::-webkit-media-controls {
+  display: none;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+h1 {
+	@include h1();
+}
+
+h2 {
+	@include title();
+}
+
+h3 {
+	@include smallTitle();
+}
+
+p {
+	@include paragraph();
+}
+
+.container {
+	max-width: 940px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.red {
+	color: $red;
+}
+
+.overflow {
+	overflow: hidden;
+}
+
+#nprogress .bar {
+  background: $red !important;
+  height: 3px !important;
+}
+
+#nprogress .peg {
+  -webkit-box-shadow: 0 0 10px $red, 0 0 5px $red !important;
+          box-shadow: 0 0 10px $red, 0 0 5px $red !important;
+}
+
+#nprogress .spinner-icon {
+  border-top-color: $red !important;
+  border-left-color: $red !important;
+}

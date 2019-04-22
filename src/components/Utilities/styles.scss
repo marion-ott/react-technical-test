@@ -1,0 +1,15 @@
+@import "src/config/styles.scss";
+
+.Utilities {
+    width: 100%;
+    padding: $blocPadding;
+    &__items {
+        padding: $contentPadding;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        @include mobile {
+            display: block;
+        }
+    }
+}

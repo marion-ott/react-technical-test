@@ -1,0 +1,21 @@
+@import "src/config/styles.scss";
+
+.UtilityItem {
+    opacity: 0;
+    width: 32%;
+    text-align: center;
+    @include mobile {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+    &__icon {
+        margin-bottom: 25px;
+    }
+    &__title {
+        margin-bottom: 20px;
+    }
+}

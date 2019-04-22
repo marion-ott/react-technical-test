@@ -1,0 +1,21 @@
+@import "src/config/styles.scss";
+
+.Grid {
+    width: 100%;
+    padding: $blocPadding;
+    &__items {
+        width: 100%;
+        display: grid;
+        display: -ms-grid;
+        -webkit-column-gap: 20px;
+                column-gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        -ms-grid-columns: 1fr 1fr 1fr;  
+        margin: 0 auto;
+        padding: $contentPadding;
+        @include tablet {
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            -ms-grid-columns: 1fr 1fr;    
+        }
+    }
+}

@@ -1,0 +1,77 @@
+$mobile: 320px;
+$tablet: 768px;
+$laptop: 1024px;
+
+@mixin xs-mobile() { @media screen and (max-width:$mobile) { @content; } } 
+@mixin mobile() { @media screen and (max-width:$tablet) { @content; } } 
+@mixin tablet() { @media screen and (max-width:$laptop) { @content; } } 
+@mixin laptop() { @media screen and (min-width:$laptop) { @content; } } 
+
+$red: #d83359;
+$grey: #777777;
+$btnGrey: #3e3e3e;
+$white: #ffffff;
+$black: #222222;
+
+$light: 100;
+$regular: normal;
+$medium: 400;
+$semiBold: 500;
+$bold: bold;
+
+$letterSpacing: -0.025em;
+
+$blocPadding: 100px 0;
+$contentPadding: 0 20px;
+
+@mixin bitter {
+    font-family: 'Bitter', serif;
+}
+
+@mixin poppins {
+    font-family: 'Poppins', serif;
+}
+
+@mixin h1 {
+    font-size: 60px;
+    line-height: 65px;
+	font-weight: $bold;
+    text-transform: uppercase;
+    letter-spacing: $letterSpacing;
+    color: $white;
+    @include poppins();
+    @include mobile {
+        font-size: 50px;
+        line-height: 55px;
+    }
+}
+
+@mixin title {
+    color: $black;
+    font-size: 40px;
+    font-weight: $bold;
+    text-transform: uppercase;
+    letter-spacing: $letterSpacing;
+    @include poppins();
+    @include mobile {
+        font-size: 30px;
+        line-height: 40px;
+    }
+}
+
+@mixin smallTitle {
+    color: $black;
+    font-size: 18px;
+    font-weight: $bold;
+    text-transform: uppercase;
+    @include poppins();
+}
+
+@mixin paragraph {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: $regular;
+    font-style: normal;
+    letter-spacing: $letterSpacing;
+    color: $grey;
+}

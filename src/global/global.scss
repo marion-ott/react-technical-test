@@ -1,0 +1,65 @@
+@import "src/config/styles.scss";
+
+.Button {
+    display: inline-block;
+    margin-top: 45px;
+    font-size: 16px;
+    font-weight: $bold;
+    letter-spacing: $letterSpacing;
+    color: $white;
+    background-color: $red;
+    border-radius: 50px;
+    padding: 20px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    @include poppins();
+    transition: ease .2s all;
+    &:hover {
+        background-color: $white;
+        color: $black;
+    }
+}
+
+.SectionHead {
+    text-align: center;
+    padding: 0 20px;
+    &__title {
+        opacity: 0;
+        position: relative;
+        top: 20px;
+        margin-bottom: 10px;
+    }
+    &__subtitle {
+        font-size: 20px;
+        opacity: 0;
+        position: relative;
+        top: 10px;
+        margin-bottom: 60px;
+        @include mobile {
+            font-size: 18px;
+        }
+    }
+}
+
+.Video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    @media (min-aspect-ratio: 16/9) {
+        height: 300%;
+        top: -100%;
+    }
+    @media (max-aspect-ratio: 16/9) {
+        width: 300%;
+        left: -100%;
+    }
+    @supports (object-fit: cover) {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+    }
+}
